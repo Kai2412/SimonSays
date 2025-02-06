@@ -16,7 +16,7 @@ function checkAnswer(){
   } else {
     $('body').addClass("game-over");
     var gameOverSound = new Audio('sounds/wrong.mp3');
-    gameOverSound.volume = 0.15; 
+    gameOverSound.volume = 0.0; 
     gameOverSound.play();
     setTimeout(function(){
         alert('You suck!');
