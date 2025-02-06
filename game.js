@@ -15,7 +15,9 @@ function checkAnswer(){
     setTimeout(function(){nextSequence();},1000)
   } else {
     $('body').addClass("game-over");
-    new Audio('sounds/wrong.mp3').play();
+    var gameOverSound = new Audio('sounds/wrong.mp3');
+    gameOverSound.volume = 0.15; 
+    gameOverSound.play();
     setTimeout(function(){
         alert('You suck!');
         $('h1').text("Game Over, Press Any Key to Restart");
@@ -27,6 +29,7 @@ function checkAnswer(){
 
 function playSound(name) {
     var generalSound = new Audio('sounds/'+ name +'.mp3');
+    generalSound.volume = 0.15; 
     generalSound.play();
 };
 function animatePress(currentColour) {
